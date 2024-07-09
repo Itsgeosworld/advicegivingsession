@@ -83,6 +83,7 @@ if age >= 18:
 
     print(f'You have answered the questions related to fears! You now have {points} points in total.')
 
+
     if points >= 5:
         response = input('From the previous questions, which fear do you believe that you have? ').upper()
         print('A. Fear of Rejection ')
@@ -106,12 +107,9 @@ if age >= 18:
             print('One with fear of loss will have to come to acceptance of loved ones fate and their own. Spend time with loved ones. ')
         elif response == 'G':
             print('No fears? Hmm...interesting.')
+        else:
+            print(f'You have {points} points. You are not able to continue the session...')
 
 
 print('Now you have been given advice on how to combat your fears!')
-
-
-
-
-
 
