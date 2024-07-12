@@ -1,19 +1,24 @@
-print('Welcome to the Inner Child Session!')
+print('Welcome to the Advice Giving Session!')
 first_name = input('What is your first name? ')
 last_name_initial = input('What is the initial for your last name? ')
 age = int(input('What is your age? '))
+
+# The user starts with 0 points when entering the session
 points = 0
 
-print(f'Hello {first_name} {last_name_initial} you are {age} years old.')
+print(f'Hello {first_name} {last_name_initial}, you are {age} years old.')
 
 if age >= 18:
     print(f'{first_name}, you are old enough to start this session!')
+else:
+    print(f'{first_name}, you are not old enough to start this session.')
+    quit()
 
-    response_to_join_session = input('Are you ready to begin this session? ').lower()
-    if response_to_join_session == 'y':
-        print(f'Lets begin this session! You currently have {points} points.')
-        print('Firstly, you will be asked questions on types of fears you are familiar with or experienced.')
-        print('Each fear you are familiar with you will earn 5 points. If not, you will lose 5 points!')
+response_to_join_session = input('Are you ready to begin this session? ').lower()
+if response_to_join_session == 'y':
+    print(f'Lets begin this session! You currently have {points} points.')
+    print('Firstly, you will be asked questions on types of fears you are familiar with or experienced.')
+    print('Each fear you are familiar with you will earn 5 points. If not, you will lose 5 points!')
 
 
     first_question = input('Are you aware of what fear of rejection is? (y/n) ')
@@ -85,7 +90,6 @@ if age >= 18:
 
 
     if points >= 5:
-        response = input('From the previous questions, which fear do you believe that you have? ').upper()
         print('A. Fear of Rejection ')
         print('B. Fear of Failure ')
         print('C. Fear of Judgement ')
@@ -93,6 +97,7 @@ if age >= 18:
         print('E. Fear of Change ')
         print('F. Fear of Loss')
         print('G. None')
+        response = input('Based on the previous questions, which fear do you believe that you have? ').upper()
         if response == 'A':
             print('One common solution for fear of rejection is face it head on instead of avoiding it.')
         elif response == 'B':
@@ -109,6 +114,7 @@ if age >= 18:
             print('No fears? Hmm...interesting.')
         else:
             print(f'You have {points} points. You are not able to continue the session...')
+            quit()
 
 
 print('Now you have been given advice on how to combat your fears!')
