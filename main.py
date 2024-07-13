@@ -10,15 +10,13 @@ print(f'Hello {first_name} {last_name_initial}, you are {age} years old.')
 
 if age >= 18:
     print(f'{first_name}, you are old enough to start this session!')
-else:
-    print(f'{first_name}, you are not old enough to start this session.')
-    quit()
 
 response_to_join_session = input('Are you ready to begin this session? ').lower()
 if response_to_join_session == 'y':
     print(f'Lets begin this session! You currently have {points} points.')
     print('Firstly, you will be asked questions on types of fears you are familiar with or experienced.')
     print('Each fear you are familiar with you will earn 5 points. If not, you will lose 5 points!')
+
 
 
     first_question = input('Are you aware of what fear of rejection is? (y/n) ')
@@ -118,4 +116,5 @@ if response_to_join_session == 'y':
 
 
 print('Now you have been given advice on how to combat your fears!')
+
 
